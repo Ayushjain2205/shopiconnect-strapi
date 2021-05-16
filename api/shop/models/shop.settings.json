@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shops",
+  "info": {
+    "name": "shop",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "coordinates": {
+      "type": "json"
+    },
+    "homeDelivery": {
+      "type": "boolean"
+    },
+    "pickup": {
+      "type": "boolean"
+    },
+    "location": {
+      "via": "shops",
+      "model": "location"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "category": {
+      "via": "shops",
+      "model": "category"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "img_src": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    }
+  }
+}
