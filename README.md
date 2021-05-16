@@ -1,3 +1,3 @@
-# Strapi application
+# Shopiconnect Backend
 
-A quick description of your strapi application
+This is the backend for shopiconnect
